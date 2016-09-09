@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         leetcode-hide-locked
 // @namespace    weibo.com/flowmemo
-// @version      0.1.1
+// @version      0.1.2
 // @description  hide locked problems in LeetCode
 // @author       flowmemo
 // @match        https://leetcode.com/problemset/*
@@ -14,7 +14,7 @@
 ; (function () {
   'use strict'
   function removeLocked () {
-    const locked = document.getElementsByClassName('fa-lock')
+    const locked = document.querySelectorAll('tbody.reactable-data .fa-lock')
     Array.prototype.forEach.call(locked, item => {
       const tr = item.parentElement.parentElement.parentElement
       if (tr.tagName === 'TR') tr.style.display = 'none'
