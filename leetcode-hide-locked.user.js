@@ -2,13 +2,13 @@
 // ==UserScript==
 // @name         leetcode-hide-locked
 // @namespace    weibo.com/flowmemo
-// @version      0.1.0
+// @version      0.1.1
 // @description  hide locked problems in LeetCode
 // @author       flowmemo
 // @match        https://leetcode.com/problemset/*
 // @grant        none
 // @license      MIT
-// @supportURL   https://github.com/leetcode-hide-locked
+// @supportURL   https://github.com/flowmemo/leetcode-hide-locked
 // ==/UserScript==
 
 ; (function () {
