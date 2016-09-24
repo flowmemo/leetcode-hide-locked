@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         leetcode-hide-locked
 // @namespace    weibo.com/flowmemo
-// @version      0.1.3
+// @version      0.1.4
 // @description  hide locked problems in LeetCode
 // @author       flowmemo
 // @match        https://leetcode.com/problemset/*
@@ -11,7 +11,7 @@
 // @supportURL   https://github.com/flowmemo/leetcode-hide-locked
 // ==/UserScript==
 
-; (function () {
+;(function () {
   'use strict'
   function removeLocked () {
     const all = document.querySelectorAll('tbody.reactable-data tr')
@@ -25,4 +25,5 @@
   const problemList = document.querySelector('div[data-reactroot]')
   const observer = new MutationObserver(removeLocked)
   observer.observe(problemList, { childList: true, subtree: true })
+  removeLocked()
 })()
